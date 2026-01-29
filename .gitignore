@@ -8,6 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Dependency directories/environments
+.gitignore
+node_modules/
+.pnp
+.pnp.js
 .env
 .env.local
 .env.*.local
