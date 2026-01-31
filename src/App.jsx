@@ -1,8 +1,12 @@
-import React from 'react'
+
+// import { PhotoFetcher } from './api/mediaApi'
+import { SearchBar } from './components/SearchBar'
 
 const App = () => {
   return (
-    <div>App</div>
+   <div className='w-full h-screen text-white bg-gray-950' >
+    <SearchBar/>
+   </div>
   )
 }
 
