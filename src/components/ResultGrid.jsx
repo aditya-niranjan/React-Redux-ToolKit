@@ -8,7 +8,7 @@ import {
   setResults,
   setError,
   clearResults,
-} from "../redux/Features/searchSlice";
+} from "../Redux/Features/searchSlice";
 import ResultCard from "./ResultCard";
 
 const ResultGrid = () => {
