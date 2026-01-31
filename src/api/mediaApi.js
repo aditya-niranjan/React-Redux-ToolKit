@@ -11,6 +11,7 @@ export async function PhotoFetcher(query,page=1,per_page=20){
       Authorization:`Client-ID ${UNSPLASH_KEY}`
     },
   });
+  
   return res.data;
 }
 

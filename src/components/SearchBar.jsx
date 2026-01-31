@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setQuery } from '../redux/Features/searchSlice';
 
+
 export const SearchBar = () => {
   const [text, setText] = useState('')
 
@@ -9,19 +10,21 @@ export const SearchBar = () => {
 
   const SubmitHandler = (e) => {
     e.preventDefault();
-    dispatch(setQuery(text)); 
+    dispatch(setQuery(text));
+    // console.log('Search submitted:', text);
     setText('');
   }
 
   return (
     <div className='w-full flex justify-center px-2 sm:px-4'>
       <form 
-        onSubmit={(e)=>{ SubmitHandler(e) }}
+        onSubmit={(e)=>{
+           SubmitHandler(e) }}
         className='
           w-full 
           max-w-5xl
           text-white 
-          h-14 sm:h-16
+          h-14 sm:h-13
           bg-[#b7b0b02e] 
           border-[#b9abab] 
           border 
@@ -29,8 +32,8 @@ export const SearchBar = () => {
           items-center 
           rounded-b-3xl sm:rounded-b-4xl 
           justify-center 
-          gap-3 sm:gap-6 
-          px-3 sm:px-6
+          gap-3 sm:gap-4 
+          px-2 sm:px-4
         ' 
       >
         <input
@@ -58,6 +61,7 @@ export const SearchBar = () => {
         <div className="shrink-0">
           <button 
             className='
+            cursor-pointer
               text-white 
               border-[#0f380f]  
               bg-green-600 
