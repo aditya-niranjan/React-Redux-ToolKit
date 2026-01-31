@@ -340,7 +340,7 @@ Show fallback when image/video fails to load instead of broken image.
 
 ```jsx
 {hasError && (
-  <div className="w-full h-[200px] bg-gray-800 flex items-center justify-center">
+  <div className="w-full h-50 bg-gray-800 flex items-center justify-center">
     Failed to load
   </div>
 )}

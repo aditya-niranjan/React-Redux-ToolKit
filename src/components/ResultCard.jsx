@@ -78,19 +78,19 @@ const ResultCard = memo(({ item, idx }) => {
     >
       {/* Skeleton placeholder */}
       {!isLoaded && (
-        <div className="w-full h-[350px] bg-gray-700 rounded-lg animate-pulse" />
+        <div className="w-full h-87.5 bg-gray-700 rounded-lg animate-pulse" />
       )}
 
       {/* Error fallback */}
       {hasError && (
-        <div className="w-full h-[350px] bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">
+        <div className="w-full h-87.5 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">
           Failed to load
         </div>
       )}
 
       {!hasError && item.type === 'photo' ? (
         <img
-          className={`w-full h-[350px] object-cover rounded-lg transition-opacity duration-300 ${
+          className={`w-full h-87.5 object-cover rounded-lg transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
           }`}
           src={isVisible ? item.src : undefined}
@@ -104,7 +104,7 @@ const ResultCard = memo(({ item, idx }) => {
         <>
           {/* Poster image - shows immediately */}
           <img
-            className={`w-full h-[350px] object-cover rounded-lg transition-opacity duration-300 ${
+            className={`w-full h-87.5 object-cover rounded-lg transition-opacity duration-300 ${
               isLoaded && !isHovered ? 'opacity-100' : isHovered && videoReady ? 'opacity-0' : 'opacity-100'
             }`}
             src={isVisible ? item.poster : undefined}
@@ -118,7 +118,7 @@ const ResultCard = memo(({ item, idx }) => {
           {isHovered && (
             <video
               ref={videoRef}
-              className={`absolute top-0 left-0 w-full h-[350px] object-cover rounded-lg transition-opacity duration-300 ${
+              className={`absolute top-0 left-0 w-full h-87.5 object-cover rounded-lg transition-opacity duration-300 ${
                 videoReady ? 'opacity-100' : 'opacity-0'
               }`}
               src={item.url}
@@ -146,7 +146,7 @@ const ResultCard = memo(({ item, idx }) => {
 
       {/* Creator info overlay at bottom */}
       {isLoaded && !hasError && (
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-b-lg">
+        <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-3 rounded-b-lg">
           <a 
             href={item.user_url} 
             target="_blank" 
