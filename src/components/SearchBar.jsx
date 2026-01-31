@@ -67,9 +67,12 @@ export const SearchBar = () => {
               bg-green-600 
               border-2 
               rounded-full 
-              py-1 
-              px-4 sm:px-6
+              py-0.5 
+              px-3 sm:px-6
               text-base sm:text-[20px]
+              active:scale-90
+              transition-all 
+              duration-150
             '
           >
             Search
